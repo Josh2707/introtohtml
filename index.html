@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>		
-        <title>My Clicker Game</title>
-    </head>
-    <body>
+
+<head>
+    <title>My Clicker Game</title>
+</head>
+
+<body>
+
     <div>
- 	    <h1>Demo Code</h1>
-	    <div>
-			<p>My name is James.</p>
-			<p>I love playing soccer.</p>
-	    </div>
+        <h1>Demo Code</h1>
+
+        <div>
+            <p>My name is James.</p>
+            <p>I love playing soccer.</p>
+
+            <!-- This is where JS will show output -->
+            <p id="scoreText">Score: 0</p>
+
+            <!-- Button to interact -->
+            <button onclick="addScore()">Click me!</button>
+        </div>
     </div>
-    </body>
+
+    <script>
+        // Variables
+        let playerName = "Alex";
+        let score = 0;
+        let isAlive = true;
+        const MAX_LIVES = 3;
+
+        // Function runs when button is clicked
+        function addScore() {
+            score = score + 10;
+
+            // Show in console (for learning)
+            console.log("Score is:", score);
+
+            // Show on webpage
+            document.getElementById("scoreText").innerHTML = "Score: " + score;
+        }
+    </script>
+
+</body>
+
 </html>
